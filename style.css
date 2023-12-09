@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap');
+
+@font-face {
+  font-family: 'Poppins';
+  src:
+    url('AppointmentSystem/Poppins-SemiBold.ttf') format('ttf'),
+    url('AppointmentSystem/Poppins-Bold.ttf') format('ttf'),
+    url('AppointmentSystem/Poppins-ExtraBold.ttf') format('ttf');
+  font-weight: 700; 
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'Roboto';
+  src:
+    url('AppointmentSystem/Roboto-Regular.ttf') format('ttf'),
+    url('AppointmentSystem/Roboto-Medium.ttf') format('ttf'),
+    url('AppointmentSystem/Roboto-Bold.ttf') format('ttf');
+  font-weight: 700; 
+  font-style: normal;
+}
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  height: 1000vh;
+}
+                                                   /*START NAVIGATION BAR*/
+nav{
+  background-color:transparent;
+  height: 100px;
+  width: 100%;
+  line-height: 80px;
+  padding: 0 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: background-color 0.1s ease;
+  box-shadow: none; 
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+.menu li a {
+  color: #970b9a;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-decoration: none;
+  position: relative;
+}
+.menu li a::after {
+  content: '';
+  display: block;
+  height: 2px; 
+  width: 0;
+  background-color: royalblue; 
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease; 
+}
+.menu li a:hover::after {
+  width: 100%;
+}
+.logo img{
+  width: 60px;
+}
+.logo {
+  flex:1;
+}
+.logo .logo-name{
+  font-size: 34px;
+  font-weight: 700;
+  color:#970b9a;
+}
+.logo a{
+  display: flex;
+  align-items: center;
+}
+.menu{
+  display: flex;
+  align-items: center;
+}
+.menu .menu-list a{
+  color: #970b9a;
+  font-size: 16px;
+  padding:10px 20px;
+  text-decoration: none;
+}
+.menu .menu-list a:hover{
+  color:royalblue;
+}
+
+.toggle-label{
+  font-size: 30px;
+  padding-top:20px;
+  color: #000000;
+  float: right;
+  line-height: 80px;
+  margin-right: 20px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+@media screen and (max-width:925px){
+  nav{
+    display: block;
+    position:fixed;
+    padding:15px 25px;
+}
+
+.toggle-label{
+  display: block;
+  position: relative;
+  top:-0.7em;
+}
+.menu{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  -webkit-backdrop-filter:blur(50px);
+  backdrop-filter: blur(50px);
+  top: 80px;
+  left: -100%;
+  text-align: center;
+  transition: all 0.8s;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding-top:30px;
+}
+nav .menu
+li {
+  display: block;
+  padding: 5px;
+  font-size: 16px;
+  width:100%;
+}
+
+#check:checked ~ .menu {
+  left: 0;
+}
+.bar:hover {
+  position: relative;
+  right: 2px;
+}
+}
+                                                   /*END OF NAVIGATION BAR */
+ 
+.hero-text {
+  padding: 20px;
+  width: 100%;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-section {
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+height: 700px;
+padding: 10px;
+}
+
+.hero-text {
+text-align: left;
+padding: 0 100px 0 100px;
+line-height: 52px;
+}
+.hero-text p {
+opacity: 0.6;
+}
+
+.hero-text h1 {
+font-size: 45px;
+font-weight: 500;
+}
+
+.calendar {
+filter: brightness(0) invert(1);
+height: 20px;
+width: 20px;
+position: relative;
+top: 4px;
+}
+
+.Book_Btn {
+margin-top: 10px;
+padding: 18px;
+font-size: 16px;
+font-weight: 600;
+border: none;
+border-radius: 5px;
+background-color: royalblue;
+color: white;
+}
+.Book_Btn:hover{
+  color:royalblue;
+  background-color: white;
+}
+
+.hero-image img {
+max-height: 600px;
+max-width: 600px;
+}
+/*
+@media screen and (max-width:925px){
+  .hero-section{
+    padding:0;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-text{
+    font-size: 18px;
+  }
+  .hero-image{
+    display: none;
+  }
+  
+}*/
+@media only screen and (max-width: 1200px) {
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+    margin-top: 80px;
+  }
+
+  .hero-text {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    }
+    .hero-text h1{
+      font-size: 36px;
+
+    }
+    .Book_Btn{
+      margin-top:30px;
+    }
+}
